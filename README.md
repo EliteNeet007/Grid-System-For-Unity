@@ -12,9 +12,10 @@ This repository contains:
 # Features
 ## Multiple Grid Geometries
 The framework currently supports:
-- Square grids.
-- Hexagonal grids.
-- Equilateral triangle grids.
+
+![Square Grid](Media/square_grid_image.png)
+![Hexagon Grid](Media/hexagon_grid_image.png)
+![Triangle Grid](Media/triangle_grid_image.png)
 
 Each geometry implements a shared interface, allowing gameplay to remain largely geometry-independent.
 
@@ -33,6 +34,12 @@ Supported concepts include:
 - Combined neighbor queries.
 - Geometry-specific neighbor rules.
 Different geometries can define their own adjacency behavior while exposing a consistent API.
+
+Here it is in action.
+Yellow for the current cell, green for edge neighbors, blue for vertex neighbors.
+![Square Example](Media/square_grid_gif.gif)
+![Hexagon Example](Media/hexagon_grid_gif.gif)
+![Triangle Example](Media/triangle_grid_gif.gif)
 
 ## World Space Utilities
 The framework includes utilities for:
