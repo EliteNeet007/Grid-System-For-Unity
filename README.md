@@ -46,12 +46,15 @@ This project was created to provide a modular approach where gameplay systems op
 The framework supports:
 
 - Square grid:
+
 ![Square Grid](Media/square_grid_image.png)
 
 - Hexagonal grid:
+
 ![Hexagonal Grid](Media/hexagon_grid_image.png)
 
 - Triangle grid:
+
 ![Triangle Grid](Media/triangle_grid_image.png)
 
 Each geometry implements a shared interface exposed through a consistent API.
