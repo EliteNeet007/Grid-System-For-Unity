@@ -1,6 +1,6 @@
 # Unity Grid Framework
 
-A modular and extensible 2D grid framework for Unity designed to support geometry-independent gameplay systems across square, hexagonal, and equilateral triangle layouts.
+A modular and extensible 2D grid framework for Unity designed to support geometry-agnostic gameplay systems across square, hexagonal, and equilateral triangle layouts.
 
 This repository contains:
 - A reusable geometry-agnostic grid system.
@@ -145,7 +145,7 @@ Each geometry defines:
 - How edge and vertex relationships behave.
 - How the full grid footprint is calculated.
 
-This allows the same high-level gameplay code to work across multiple grid types.
+That Enables the same high-level gameplay code to work across multiple grid types.
 
 ## Neighbor Logic
 
@@ -175,10 +175,10 @@ The game layer depends on the grid API, but the grid system itself does not depe
 ## Geometry Isolation
 The grid container is separated from geometry-specific behavior.
 
-This allows:
-- Gameplay systems to remain geometry-agnostic.
-- New geometries to be introduced without modifying existing gameplay code.
-- Individual geometry implementations to evolve independently.
+Advantages:
+- Gameplay systems remain geometry-agnostic.
+- New geometries may be introduced without modifying existing gameplay code.
+- Individual geometry implementations can evolve independently.
 
 The goal is to treat geometry as a pluggable rule set rather than a hardcoded assumption.
 
@@ -252,7 +252,7 @@ Takes in a position - (x, y) or Vector2Int or Vector3, and returns true if the p
 ```csharp
 Vector3 worldPosition = grid.GetCellCenterWorldPosition(cellCoords);
 ```
-Takes in coordinates - (x, y) or Vector2Int position or Vector3 worldPosition, and returns the world position of the corresponding cell.
+Takes in coordinates - (x, y) or Vector2Int or Vector3, and returns the world position of the corresponding cell.
 
 ```csharp
 Vector2Int cellCoords = grid.GetVectorInts(position);
@@ -263,8 +263,7 @@ Takes in a Vector3 position and returns the coordinates of the corresponding cel
 ```csharp
 grid.FillNeighborsBuffer(cellPosition, neighborsBuffer);
 ```
-Takes in a cell position, (x, y) or Vector2Int position or Vector3 worldPosition.
-As well as a Vector2Int[] neighborsBuffer.
+Takes in a cell position - (x, y) or Vector2Int or Vector3, As well as a Vector2Int[] neighborsBuffer.
 Returns a filled buffer, can include invalid neighbor positions or filter these out before returning the result.
 
 # Core Design Goals
