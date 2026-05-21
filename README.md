@@ -21,7 +21,7 @@ This project was created to provide a modular approach where gameplay systems op
     - [Geometry Abstraction](#geometry-abstraction)
     - [Neighbor Query Support](#neighbor-query-support)
     - [World Space Utilities](#world-space-utilities)
-    - [Territory Control Example Project](#territory-control-exmaple-project)
+    - [Territory Control Example Project](#territory-control-example-project)
 
 - [Architecture Overview](#architecture-overview)
     - [Grid2D](#grid2d)
